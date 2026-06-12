@@ -1,131 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Happy Birthday Preet ❤️</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Preet ❤️</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
 body{
-background:#ffebf3;
-font-family:Arial;
+background:linear-gradient(135deg,#ffdde1,#ee9ca7);
 text-align:center;
-padding:20px;
+overflow-x:hidden;
 }
 
-h1{
-color:#ff0066;
+header{
+padding:40px 20px;
+color:white;
 }
 
-.box{
+header h1{
+font-size:40px;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{transform:scale(1);}
+to{transform:scale(1.08);}
+}
+
+.message{
 background:white;
-padding:20px;
 margin:20px;
+padding:20px;
 border-radius:20px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+box-shadow:0 0 15px rgba(0,0,0,0.2);
 }
 
-img{
-width:90%;
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
 border-radius:20px;
-margin-top:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
 }
 
 .love{
-font-size:22px;
+font-size:28px;
 color:red;
 font-weight:bold;
+padding:20px;
+}
+
+.heart{
+position:fixed;
+top:-20px;
+color:red;
+font-size:20px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
 }
 </style>
 </head>
 
 <body>
 
-<h1>🎂 Happiest Birthday Preet ❤️</h1>
+<header>
+<h1>🎂 Happy Birthday Preet ❤️</h1>
+<p>The Most Beautiful Girl In My Life 💖</p>
+</header>
 
-<div class="box">
-<h2>From Dipanshu 💖</h2>
+<div class="message">
+<h2>💌 From Dipanshu</h2>
 <p>
 29 June ko duniya ko ek bahut pyari ladki mili thi,
 aur mujhe meri Preet mili ❤️
 </p>
 </div>
 
-<div class="box">
-<h2>🌹 Hamari Pehli Mulakat</h2>
+<div class="message">
+<h2>🌹 Hamari Yaadein</h2>
 <p>
-Mujhe aaj bhi yaad hai jab hum office me pehli baar mile the.
-Tumne mujhe computer par kaam karna sikhaya tha.
-Shayad us din mujhe pata nahi tha ki tum meri zindagi ka
-sabse special hissa ban jaogi.
+Har photo ek yaad hai,
+har yaad mere dil ke bahut kareeb hai. 💕
 </p>
 </div>
 
-<div class="box">
-<h2>📦 Pehli Proper Baat</h2>
-<p>
-Jab boss ne sirf hume dono ko saman pack karne ke liye bola tha,
-tab hamari pehli baar achhe se baat hui thi.
-Aur wahi se hamari kahani aur bhi khoobsurat hone lagi.
-</p>
+<div class="gallery">
+
+<img src="Screenshot_20260612_180642_Instagram.jpg">
+
+<img src="Screenshot_20260612_182219_Instagram.jpg">
+
+<img src="Screenshot_20260612_182228_Instagram.jpg">
+
+<img src="Screenshot_20260612_182242_Instagram.jpg">
+
+<img src="Screenshot_20260612_182305_Instagram.jpg">
+
+<img src="Screenshot_20260612_183608_Gallery.jpg">
+
 </div>
 
-<div class="box">
-<h2>😂 Noida Funny Moments</h2>
-<p>
-Supply dene Noida jana aur wahan ke funny moments...
-Aaj bhi yaad karke hasi aa jati hai.
-Un lamhon ne hamari dosti aur bhi strong bana di.
-</p>
+<div class="love">
+❤️ I Love You Preet ❤️
 </div>
 
-<div class="box">
-<h2>🥺 Emotional Memory</h2>
-<p>
-Jab tumne apne ghar aur life ki problems mere saath share ki thi,
-tab mujhe laga ki tum mujh par trust karti ho.
-Woh moment mere liye bahut special rahega.
-</p>
-</div>
-
-<div class="box">
-<h2>❤️ Our First Month</h2>
-<p>
-Hamara pehla month hamesha yaad rahega.
-Woh waqt jab hum proper boyfriend girlfriend the.
-Meri zindagi ke sabse khoobsurat dino me se ek.
-</p>
-</div>
-
-<div class="box">
-<h2>😊 Meri Favourite Baat</h2>
-<p>
-Tumhari cute smile,
-tumhari hansi,
-aur tumhara baar baar "Hey Bhagwan" bolna...
-ye sab mujhe bahut pasand hai ❤️
-</p>
-</div>
-
-<div class="box">
-<h2>💌 Last Message</h2>
-<p>
-Preet,
-
-Main nahi jaanta future me kya hoga.
-
-Agar tumhe mujhse love nahi hai,
-toh koi baat nahi.
-
-Lekin main tumhe dil se hamesha pyaar karta rahunga ❤️
-
-Happy Birthday Preet 🎂❤️
-</p>
-</div>
-
-<p class="love">
-Forever Yours ❤️<br>
-Dipanshu
-</p>
+<script>
+for(let i=0;i<40;i++){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(3+Math.random()*5)+"s";
+heart.style.opacity=Math.random();
+document.body.appendChild(heart);
+}
+</script>
 
 </body>
 </html>
