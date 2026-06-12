@@ -11,68 +11,99 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#ffdde1,#ee9ca7);
-text-align:center;
+background:linear-gradient(135deg,#ffdce5,#f8c8d8);
 overflow-x:hidden;
 }
 
-header{
+section{
+min-height:100vh;
 padding:40px 20px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+h1,h2{
+margin-bottom:15px;
+}
+
+.hero{
+color:#ff0066;
+}
+
+.hero h1{
+font-size:3rem;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.08);}
+}
+
+.btn{
+padding:12px 25px;
+background:#ff0066;
 color:white;
+text-decoration:none;
+border-radius:30px;
+margin-top:20px;
+font-weight:bold;
 }
 
-header h1{
-font-size:40px;
-animation: glow 2s infinite alternate;
-}
-
-@keyframes glow{
-from{transform:scale(1);}
-to{transform:scale(1.08);}
-}
-
-.message{
+.card{
 background:white;
-margin:20px;
-padding:20px;
-border-radius:20px;
-box-shadow:0 0 15px rgba(0,0,0,0.2);
+width:95%;
+max-width:800px;
+padding:25px;
+margin:15px;
+border-radius:25px;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
 }
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:15px;
-padding:20px;
+width:100%;
+max-width:1100px;
 }
 
 .gallery img{
 width:100%;
+height:420px;
+object-fit:cover;
 border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
+box-shadow:0 5px 15px rgba(0,0,0,0.25);
 transition:.4s;
 }
 
 .gallery img:hover{
-transform:scale(1.05);
+transform:scale(1.03);
 }
 
-.love{
-font-size:28px;
-color:red;
-font-weight:bold;
-padding:20px;
+.final{
+background:linear-gradient(135deg,#ff5f9e,#ff0066);
+color:white;
+}
+
+.final h1{
+font-size:3rem;
+animation:pulse 2s infinite;
 }
 
 .heart{
 position:fixed;
 top:-20px;
-color:red;
-font-size:20px;
+font-size:22px;
 animation:fall linear infinite;
+pointer-events:none;
+z-index:999;
 }
 
 @keyframes fall{
@@ -85,26 +116,14 @@ transform:translateY(110vh);
 
 <body>
 
-<header>
-<h1>🎂 Happy Birthday Preet ❤️</h1>
+<section class="hero">
+<h1>🎂 Happiest Birthday Preet ❤️</h1>
 <p>The Most Beautiful Girl In My Life 💖</p>
-</header>
+<a href="#gallery" class="btn">Read Our Story ❤️</a>
+</section>
 
-<div class="message">
-<h2>💌 From Dipanshu</h2>
-<p>
-29 June ko duniya ko ek bahut pyari ladki mili thi,
-aur mujhe meri Preet mili ❤️
-</p>
-</div>
-
-<div class="message">
-<h2>🌹 Hamari Yaadein</h2>
-<p>
-Har photo ek yaad hai,
-har yaad mere dil ke bahut kareeb hai. 💕
-</p>
-</div>
+<section id="gallery">
+<h2>📸 Our Beautiful Memories</h2>
 
 <div class="gallery">
 
@@ -121,21 +140,128 @@ har yaad mere dil ke bahut kareeb hai. 💕
 <img src="Screenshot_20260612_183608_Gallery.jpg">
 
 </div>
+</section>
 
-<div class="love">
-❤️ I Love You Preet ❤️
+<section>
+
+<div class="card">
+<h2>💌 From Dipanshu 💖</h2>
+<p>
+29 June ko duniya ko ek bahut pyari ladki mili thi,
+aur mujhe meri Preet mili ❤️
+</p>
 </div>
 
+<div class="card">
+<h2>🌹 Hamari Pehli Mulakat</h2>
+<p>
+Mujhe aaj bhi yaad hai jab hum office me pehli baar mile the.
+Tumne mujhe computer par kaam karna sikhaya tha.
+Shayad us din mujhe pata nahi tha ki tum meri zindagi ka
+sabse special hissa ban jaogi.
+</p>
+</div>
+
+<div class="card">
+<h2>📦 Pehli Proper Baat</h2>
+<p>
+Jab boss ne sirf hume dono ko saman pack karne ke liye bola tha,
+tab hamari pehli baar achhe se baat hui thi.
+Aur wahi se hamari kahani aur bhi khoobsurat hone lagi.
+</p>
+</div>
+
+<div class="card">
+<h2>😂 Noida Funny Moments</h2>
+<p>
+Supply dene Noida jana aur wahan ke funny moments...
+Aaj bhi yaad karke hasi aa jati hai.
+Un lamhon ne hamari dosti aur bhi strong bana di.
+</p>
+</div>
+
+<div class="card">
+<h2>🥺 Emotional Memory</h2>
+<p>
+Jab tumne apne ghar aur life ki problems mere saath share ki thi,
+tab mujhe laga ki tum mujh par trust karti ho.
+Woh moment mere liye bahut special rahega.
+</p>
+</div>
+
+<div class="card">
+<h2>❤️ Our First Month</h2>
+<p>
+Hamara pehla month hamesha yaad rahega.
+Woh waqt jab hum proper boyfriend girlfriend the.
+Meri zindagi ke sabse khoobsurat dino me se ek.
+</p>
+</div>
+
+<div class="card">
+<h2>😊 Meri Favourite Baat</h2>
+<p>
+Tumhari cute smile,
+tumhari hansi,
+aur tumhara baar baar "Hey Bhagwan" bolna...
+ye sab mujhe bahut pasand hai ❤️
+</p>
+</div>
+
+<div class="card">
+<h2>💌 Last Message</h2>
+<p>
+Preet, main nahi jaanta future me kya hoga.
+Agar tumhe mujhse love nahi hai toh koi baat nahi.
+Lekin main tumhe dil se hamesha pyaar karta rahunga ❤️
+Happy Birthday Preet 🎂❤️
+</p>
+</div>
+
+</section>
+
+<section class="final">
+
+<h1>❤️ I LOVE YOU PREET FOREVER ❤️</h1>
+
+<p style="max-width:700px;font-size:22px;margin-top:20px;line-height:1.8;">
+Chahe waqt badal jaye,
+log badal jayein,
+ya raaste alag ho jayein...
+
+Meri zindagi ki sabse khoobsurat yaadon me
+tum hamesha rahogi. ❤️
+
+<br><br>
+
+Thank You For Every Smile,
+Every Memory,
+Every Moment.
+
+<br><br>
+
+Happy Birthday Preet 🎂💖
+</p>
+
+<h2 style="margin-top:40px;">
+Forever Yours ❤️<br>
+Dipanshu
+</h2>
+
+</section>
+
 <script>
-for(let i=0;i<40;i++){
+
+for(let i=0;i<60;i++){
 let heart=document.createElement("div");
 heart.className="heart";
 heart.innerHTML="❤️";
 heart.style.left=Math.random()*100+"vw";
-heart.style.animationDuration=(3+Math.random()*5)+"s";
+heart.style.animationDuration=(4+Math.random()*6)+"s";
 heart.style.opacity=Math.random();
 document.body.appendChild(heart);
 }
+
 </script>
 
 </body>
